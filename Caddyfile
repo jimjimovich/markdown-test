@@ -1,5 +1,9 @@
 0.0.0.0:8080
 root /home/ubuntu/workspace/markdown-test/public
-markdown / {
+markdown /test/ {
     template    templates/default.html
 }
+#markdown /test-proxy/ {
+#    template    templates/default.html
+#}
+proxy /test-proxy https://raw.githubusercontent.com/jimjimovich/markdown-test/master/public/test/index.md
