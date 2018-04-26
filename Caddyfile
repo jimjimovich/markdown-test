@@ -1,2 +1,5 @@
 0.0.0.0:8080
-root /home/ubuntu/workspace/test-site
+root /home/ubuntu/workspace/markdown-test/public
+markdown / {
+    template    templates/default.html
+}
