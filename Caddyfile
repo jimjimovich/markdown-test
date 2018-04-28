@@ -1,12 +1,15 @@
 0.0.0.0:8080
 root /home/ubuntu/workspace/markdown-test/public
+gzip
 markdown /test/ {
     ext         .html
     template    templates/default.html
 }
 markdown /test-proxy/ {
+    ext .md .html .txt
     template    templates/default.html
 }
 proxy /test-proxy/ https://raw.githubusercontent.com/jimjimovich/markdown-test/master/public/test/ {
     without /test-proxy/
+    header_upstream  -Accept-Encoding
 }
