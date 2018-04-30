@@ -1,6 +1,7 @@
 0.0.0.0:8080
 root /home/ubuntu/workspace/markdown-test/public
 gzip
+templates / .html
 markdown /test/ {
     ext         .html
     template    templates/default.html
