@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{.Doc.title}}</title>
+	</head>
+	<body>
+		<h1>Beatles</h1>
+		<ul>
+    		{{range $beatle := .Doc.beatles}}
+                <li>{{$beatle}}</li>
+            {{end}}
+        </ul>
+		{{.Doc.body}}
+
+		<footer>
+		    {{.Doc.footer}}
+		</footer>
+		
+	</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{.Doc.title}}</title>
+	</head>
+	<body>
+		<h1>Testing JSON into Template</h1>
+		<ul>
+    		ID: {{.Doc.id}}
+    		userId: {{.Doc.userId}}
+        </ul>
+		{{.Doc.body}}
+		<footer>
+		    <p>Your IP: {{`{{.IP}}`}}</p>
+		</footer>
+	</body>
+</html>

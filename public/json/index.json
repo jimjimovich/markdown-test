@@ -1,0 +1,11 @@
+{
+    "title": "The Beatles",
+    "beatles": [
+        "John",
+        "Paul",
+        "Ringo",
+        "George"
+    ],
+    "footer": "A footer with <a href=\"https://en.wikipedia.org/wiki/HTML\">HTML</a>",
+    "body": "This is the body from JSON"
+}
