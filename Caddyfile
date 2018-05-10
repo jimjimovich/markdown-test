@@ -1,16 +1,29 @@
 0.0.0.0:8080
 root /home/ubuntu/workspace/markdown-test/public
 gzip
-templates / .html
+index index.html index.md
+#templates / .html .md
 markdown /test/ {
-    ext         .html
+    ext         .md .html
     template    templates/default.html
 }
+markdown /json/ {
+    ext .json
+    template    templates/json2.html
+}
 markdown /test-proxy/ {
-    ext .md .html .txt
+    ext .md .html
     template    templates/default.html
 }
 proxy /test-proxy/ https://raw.githubusercontent.com/jimjimovich/markdown-test/master/public/test/ {
     without /test-proxy/
+    header_upstream  -Accept-Encoding
+}
+markdown /json-test/ {
+    ext .json
+    template    templates/json.html
+}
+proxy /json-test/ https://jsonplaceholder.typicode.com/ {
+    without /json-test/
     header_upstream  -Accept-Encoding
 }
